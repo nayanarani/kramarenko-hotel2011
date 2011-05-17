@@ -1,0 +1,5 @@
+#surefire
+#Tue May 17 12:28:14 EEST 2011
+user.dir=/home/mathan/workspace/Test
+localRepository=/home/mathan/.m2/repository
+basedir=/home/mathan/workspace/Test
