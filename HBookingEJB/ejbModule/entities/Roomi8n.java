@@ -11,7 +11,7 @@ import javax.persistence.*;
 @NamedQueries({
 		@NamedQuery(name = "Roomi8n.selectAll", query = "Select r from Roomi8n r"),
 		@NamedQuery(name = "Roomi8n.selectById", query = "Select r from Roomi8n r " +
-				"where r.id.roomId = :value AND r.id.lancode =:value") })
+				"where r.id.roomId = :value AND r.id.lancode =:value2") })
 @Table(name = "Roomi8n")
 public class Roomi8n implements Serializable {
 	private static final long serialVersionUID = 1L;

@@ -18,7 +18,7 @@ import java.util.Date;
 		@NamedQuery(name = "User.selectById", query = "Select u from User u "
 				+ "where u.userId = :value"),
 		@NamedQuery(name = "User.authenticate", query = "Select u from User u "
-				+ "WHERE u.email = :value AND u.password = :value") })
+				+ "WHERE u.email = :value AND u.password = :value2") })
 @Table(name = "User")
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;

@@ -1,5 +1,7 @@
 package beans.api.local;
 
+import java.util.List;
+
 import javax.ejb.Local;
 
 import entities.Room;
@@ -13,10 +15,12 @@ public interface RoomBeanLocal {
 
 	Room findRoomById(int id);
 
-	Room[] findAll();
+	List<Room> findAll();
 
-	Room[] findAllActive();
+	List<Room> findAllActive();
 
 	String getLocalizedDescription(Room room, String language);
+
+	boolean removeRoom(Room room);
 
 }
