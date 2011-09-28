@@ -14,7 +14,7 @@ import javax.persistence.*;
 	@NamedQuery(name = "Administrator.selectById", query = "Select a from Administrator a "
 			+ "where a.userId = :value"),
 	@NamedQuery(name = "Administrator.authenticate", query = "Select a from Administrator a "
-			+ "WHERE a.email = :value AND a.password = :value") })
+			+ "WHERE a.email = :value AND a.password = :value2") })
 @DiscriminatorValue(value = "administrator")
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
 public class Administrator extends User implements Serializable {

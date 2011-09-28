@@ -14,8 +14,8 @@ import java.util.Set;
 		@NamedQuery(name = "Room.selectAll", query = "Select r from Room r"),
 		@NamedQuery(name = "Room.selectById", query = "Select r from Room r "
 				+ "where r.roomId = :value"),
-		@NamedQuery(name = "Room.selectAvailable", query = "Select r from Room r "
-				+ "WHERE r.roomIsAvailable = 1"),
+		@NamedQuery(name = "Room.selectAllActive", query = "Select r from Room r "
+				+ "WHERE r.roomIsAvailable = true"),
 		@NamedQuery(name = "Room.selectByType", query = "Select r from Room r "
 				+ "WHERE r.roomType = :value"),
 		@NamedQuery(name = "Room.selectByClass", query = "Select r from Room r "
@@ -25,6 +25,7 @@ public class Room implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "roomId", unique = true, nullable = false)
 	private int roomId;
 
@@ -38,7 +39,7 @@ public class Room implements Serializable {
 	private String roomDescription;
 
 	@Column(name = "roomIsAvailable", nullable = false)
-	private byte roomIsAvailable;
+	private boolean roomIsAvailable;
 
 	@Column(name = "roomRate", nullable = false)
 	private int roomRate;
@@ -90,11 +91,11 @@ public class Room implements Serializable {
 		this.roomDescription = roomDescription;
 	}
 
-	public byte getRoomIsAvailable() {
+	public boolean getRoomIsAvailable() {
 		return this.roomIsAvailable;
 	}
 
-	public void setRoomIsAvailable(byte roomIsAvailable) {
+	public void setRoomIsAvailable(boolean roomIsAvailable) {
 		this.roomIsAvailable = roomIsAvailable;
 	}
 
