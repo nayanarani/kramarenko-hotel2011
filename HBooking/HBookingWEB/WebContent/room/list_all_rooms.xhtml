@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>HBooking.com</title>
+</h:head>
+<h:body>
+	<h1>HBooking.com</h1>
+	<h3>List of all rooms</h3>
+	<h:form>
+		<h:dataTable value="#{room.model}" var="item">
+			<h:column>
+				<f:facet name="header">id</f:facet>
+#{item.roomId}
+                </h:column>
+			<h:column>
+				<f:facet name="header">class</f:facet>
+#{item.roomClass}
+                </h:column>
+			<h:column>
+				<f:facet name="header">type</f:facet>
+#{item.roomType}
+                </h:column>
+			<h:column>
+				<f:facet name="header">rate</f:facet>
+#{item.roomRate}
+                </h:column>
+			<h:column>
+				<f:facet name="header">description</f:facet>
+#{item.roomDescription}
+                </h:column>
+			<h:column>
+				<f:facet name="header">capacity</f:facet>
+#{item.roomCapacity}
+			</h:column>
+			<h:column>
+				<h:commandButton value="Edit" action="#{room.setupEditRoom}" />
+				<h:commandButton value="Remove" action="#{room.removeRoom}"
+					onclick="return 
+confirm('Are you sure, you want to remove this room?')" />
+			</h:column>
+		</h:dataTable>
+		<br />
+		<h:commandButton value="Add room" action="#{room.setupAddRoom}" />
+	</h:form>
+</h:body>
+</html>
