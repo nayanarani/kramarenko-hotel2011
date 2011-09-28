@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="HBooking">
+        <wb-resource deploy-path="/" source-path="/EarContent"/>
+        <dependent-module archiveName="HBookingEJB.jar" deploy-path="/" handle="module:/resource/HBookingEJB/HBookingEJB">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="HBookingWEB.war" deploy-path="/" handle="module:/resource/HBookingWEB/HBookingWEB">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
