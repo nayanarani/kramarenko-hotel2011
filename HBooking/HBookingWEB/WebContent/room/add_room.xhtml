@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>Add room</title>
+</h:head>
+<h:body>
+	<f:view>
+		<h:form>
+			<h3>
+				<h:outputText value="Add room:" />
+			</h3>
+			<h:panelGrid columns="2">
+				<h:outputLabel value="class:" />
+				<h:inputText value="#{room.room.roomClass}" label="class"
+					title="class" required="true" />
+				<h:outputLabel value="type:" />
+				<h:inputText value="#{room.room.roomType}" label="type" title="type"
+					required="true" />
+				<h:outputLabel value="rate:" />
+				<h:inputText value="#{room.room.roomRate}" label="rate" title="rate"
+					required="true" />
+				<h:outputLabel value="description:" />
+				<h:inputText value="#{room.room.roomDescription}"
+					label="description" title="description" required="true" />
+				<h:outputLabel value="capacity:" />
+				<h:inputText value="#{room.room.roomCapacity}" label="capacity"
+					title="capacity" required="true" />
+			</h:panelGrid>
+			<h:commandButton value="Create" action="#{room.addRoom}" />
+			<h:commandButton immediate="true" value="Cancel" action="list_rooms" />
+		</h:form>
+	</f:view>
+</h:body>
+</html>
