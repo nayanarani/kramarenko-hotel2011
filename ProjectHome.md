@@ -1,0 +1,1 @@
+User logs in, chooses check-in date, check-out date, submits. Then he sees available rooms for theese dates, then he indicates person quantity and checks needed rooms, then he submits and gets the Bill: list of booked rooms, total price, persons, cid, cod, additional info (e. g. hotel rules, facilities).
